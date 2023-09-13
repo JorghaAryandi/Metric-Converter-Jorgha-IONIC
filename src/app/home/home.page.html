@@ -1,0 +1,142 @@
+
+<ion-content [fullscreen]="true">
+  <ion-header collapse="condense">
+    <ion-toolbar>
+      <ion-title size="large"></ion-title>
+    </ion-toolbar>
+  </ion-header>
+
+  <div id="container">
+    <h1><strong>Metric Converter</strong></h1>
+    <p>By : Jorgha Akram Aryandi</p>
+    
+
+    <h4>Dari:</h4>
+<ion-item class="custom-ion-item">
+  <label>Pilih Metrik</label>
+  <ion-select class="custom-ion-select" [(ngModel)]="selectedMetric">
+    <ion-select-option id="panjang" value="Panjang" label="Panjang">Panjang</ion-select-option>
+    <ion-select-option id="massa" value="Massa" label="Massa">Massa</ion-select-option>
+    <ion-select-option id="waktu" value="Waktu" label="Waktu">Waktu</ion-select-option>
+    <ion-select-option id="suhu" value="Suhu" label="Suhu">Suhu</ion-select-option>
+  </ion-select>
+</ion-item>
+
+<!-- Panjang -->
+<ion-item class="custom-ion-item" *ngIf="selectedMetric === 'Panjang'">
+  <label>Pilih Satuan (Panjang)</label>
+  <ion-select class="custom-ion-select" [(ngModel)]="selectedUnitFrom" [disabled]="selectedMetric !== 'Panjang'">
+    <ion-select-option value="km">Kilometer (KM)</ion-select-option>
+    <ion-select-option value="hm">Hektometer (HM)</ion-select-option>
+    <ion-select-option value="dam">Dekameter (DAM)</ion-select-option>
+    <ion-select-option value="m">Meter (M)</ion-select-option>
+    <ion-select-option value="dm">Desimeter (DM)</ion-select-option>
+    <ion-select-option value="cm">Centimeter (CM)</ion-select-option>
+    <ion-select-option value="mm">Milimeter (MM)</ion-select-option>
+
+  </ion-select>
+</ion-item>
+
+<ion-item class="custom-ion-item" *ngIf="selectedMetric === 'Panjang'">
+  <label>Pilih Satuan Tujuan (Panjang)</label>
+  <ion-select class="custom-ion-select" [(ngModel)]="selectedUnitTo" [disabled]="selectedMetric !== 'Panjang'">
+    <ion-select-option value="km">Kilometer (KM)</ion-select-option>
+    <ion-select-option value="hm">Hektometer (HM)</ion-select-option>
+    <ion-select-option value="dam">Dekameter (DAM)</ion-select-option>
+    <ion-select-option value="m">Meter (M)</ion-select-option>
+    <ion-select-option value="dm">Desimeter (DM)</ion-select-option>
+    <ion-select-option value="cm">Centimeter (CM)</ion-select-option>
+    <ion-select-option value="mm">Milimeter (MM)</ion-select-option>
+
+  </ion-select>
+</ion-item>
+
+<!-- Massa -->
+<ion-item class="custom-ion-item" *ngIf="selectedMetric === 'Massa'">
+  <label>Pilih Satuan (Massa)</label>
+  <ion-select class="custom-ion-select" [(ngModel)]="selectedUnitFrom" [disabled]="selectedMetric !== 'Massa'">
+    <ion-select-option value="kg">Kilogram (kg)</ion-select-option>
+    <ion-select-option value="hg">Hektogram (hg)</ion-select-option>
+    <ion-select-option value="dag">Dekagram (dag)</ion-select-option>
+    <ion-select-option value="g">Gram (g)</ion-select-option>
+    <ion-select-option value="dg">Desigram (dg)</ion-select-option>
+    <ion-select-option value="cg">Centigram (cg)</ion-select-option>
+    <ion-select-option value="mg">Miligram (mg)</ion-select-option>
+  </ion-select>
+</ion-item>
+
+<ion-item class="custom-ion-item" *ngIf="selectedMetric === 'Massa'">
+  <label>Pilih Satuan Tujuan (Massa)</label>
+  <ion-select class="custom-ion-select" [(ngModel)]="selectedUnitTo" [disabled]="selectedMetric !== 'Massa'">
+    <ion-select-option value="kg">Kilogram (kg)</ion-select-option>
+    <ion-select-option value="hg">Hektogram (hg)</ion-select-option>
+    <ion-select-option value="dag">Dekagram (dag)</ion-select-option>
+    <ion-select-option value="g">Gram (g)</ion-select-option>
+    <ion-select-option value="dg">Desigram (dg)</ion-select-option>
+    <ion-select-option value="cg">Centigram (cg)</ion-select-option>
+    <ion-select-option value="mg">Miligram (mg)</ion-select-option>
+  </ion-select>
+</ion-item>
+
+<!-- Waktu -->
+<ion-item class="custom-ion-item" *ngIf="selectedMetric === 'Waktu'">
+  <label>Pilih Satuan (Waktu)</label>
+  <ion-select class="custom-ion-select" [(ngModel)]="selectedUnitFrom" [disabled]="selectedMetric !== 'Waktu'">
+    <ion-select-option value="jam">Jam (jam)</ion-select-option>
+    <ion-select-option value="menit">Menit (menit)</ion-select-option>
+    <ion-select-option value="detik">Detik (detik)</ion-select-option>
+  </ion-select>
+</ion-item>
+
+<ion-item class="custom-ion-item" *ngIf="selectedMetric === 'Waktu'">
+  <label>Pilih Satuan Tujuan (Waktu)</label>
+  <ion-select class="custom-ion-select" [(ngModel)]="selectedUnitTo" [disabled]="selectedMetric !== 'Waktu'">
+    <ion-select-option value="jam">Jam (jam)</ion-select-option>
+    <ion-select-option value="menit">Menit (menit)</ion-select-option>
+    <ion-select-option value="detik">Detik (detik)</ion-select-option>
+  </ion-select>
+</ion-item>
+
+<!-- Suhu -->
+<ion-item class="custom-ion-item" *ngIf="selectedMetric === 'Suhu'">
+  <label>Pilih Satuan (Suhu)</label>
+  <ion-select class="custom-ion-select" [(ngModel)]="selectedUnitFrom" [disabled]="selectedMetric !== 'Suhu'">
+    <ion-select-option value="C">Celsius (°C)</ion-select-option>
+    <ion-select-option value="F">Fahrenheit (°F)</ion-select-option>
+    <ion-select-option value="K">Kelvin (K)</ion-select-option>
+  </ion-select>
+</ion-item>
+
+<ion-item class="custom-ion-item" *ngIf="selectedMetric === 'Suhu'">
+  <label>Pilih Satuan Tujuan (Suhu)</label>
+  <ion-select class="custom-ion-select" [(ngModel)]="selectedUnitTo" [disabled]="selectedMetric !== 'Suhu'">
+    <ion-select-option value="C">Celsius (°C)</ion-select-option>
+    <ion-select-option value="F">Fahrenheit (°F)</ion-select-option>
+    <ion-select-option value="K">Kelvin (K)</ion-select-option>
+  </ion-select>
+</ion-item>
+
+
+<!-- Tambahkan elemen-elemen satuan lainnya di sini sesuai kebutuhan -->
+
+<!-- Input Numerik -->
+<ion-item class="custom-ion-item">
+  <label position="floating">Input</label>
+  <ion-input id="input" [(ngModel)]="inputValue" inputmode="numeric"></ion-input>
+</ion-item>
+
+<!-- Menampilkan pesan peringatan jika input tidak numerik -->
+<ion-label *ngIf="inputError" color="danger">Input harus numerik</ion-label>
+
+<br>
+
+<!-- Tombol Convert -->
+<button class="button-18" (click)="convert()">Convert</button>
+
+<!-- Menampilkan hasil konversi di bawah tombol -->
+<h3>Hasil : </h3>
+<ion-label>{{ result }}</ion-label>
+
+
+      </div>
+</ion-content>

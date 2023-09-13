@@ -1,0 +1,99 @@
+
+#container {
+  text-align: center;
+  width: 300px; /* Sesuaikan dengan lebar yang Anda inginkan */
+  height: auto; /* Untuk membuatnya berbentuk persegi */
+  margin: 0 auto; /* Untuk membuatnya berada di tengah */
+  background-color: #f0f0f0; /* Warna abu muda */
+  border-radius: 20px; /* Border radius 5px */
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2); /* Shadow dengan warna abu-abu */
+  padding: 2%;
+  margin-top: 20px;
+}
+
+
+#container p {
+  font-size: 16px;
+  line-height: 22px;
+
+  color: #8c8c8c;
+
+  margin: 0;
+}
+
+
+#container a {
+  text-decoration: none;
+}
+
+.button-18 {
+  align-items: center;
+  background-color: #0A66C2;
+  border: 0;
+  border-radius: 100px;
+  box-sizing: border-box;
+  color: #ffffff;
+  cursor: pointer;
+  display: inline-flex;
+  font-family: -apple-system, system-ui, system-ui, "Segoe UI", Roboto, "Helvetica Neue", "Fira Sans", Ubuntu, Oxygen, "Oxygen Sans", Cantarell, "Droid Sans", "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Lucida Grande", Helvetica, Arial, sans-serif;
+  font-size: 16px;
+  font-weight: 600;
+  justify-content: center;
+  line-height: 20px;
+  max-width: 480px;
+  min-height: 40px;
+  min-width: 0px;
+  overflow: hidden;
+  padding: 0px;
+  padding-left: 20px;
+  padding-right: 20px;
+  text-align: center;
+  touch-action: manipulation;
+  transition: background-color 0.167s cubic-bezier(0.4, 0, 0.2, 1) 0s, box-shadow 0.167s cubic-bezier(0.4, 0, 0.2, 1) 0s, color 0.167s cubic-bezier(0.4, 0, 0.2, 1) 0s;
+  user-select: none;
+  -webkit-user-select: none;
+  vertical-align: middle;
+}
+
+.button-18:hover,
+.button-18:focus { 
+  background-color: #16437E;
+  color: #ffffff;
+}
+
+.button-18:active {
+  background: #09223b;
+  color: rgb(255, 255, 255, .7);
+}
+
+.button-18:disabled { 
+  cursor: not-allowed;
+  background: rgba(0, 0, 0, .08);
+  color: rgba(0, 0, 0, .3);
+}
+
+/* Ubah lebar ion-item */
+.custom-ion-item {
+  width: 70%; /* Sesuaikan dengan lebar yang Anda inginkan */
+  margin: 0 auto; /* Untuk membuat ion-item berada di tengah jika diperlukan */
+  border-radius: 16px;
+}
+
+/* Ubah lebar ion-select */
+.custom-ion-select {
+  width: 100%; /* Sesuaikan dengan lebar yang Anda inginkan */
+}
+
+.custom-ion-input {
+  width: 70%; /* Sesuaikan dengan lebar yang Anda inginkan */
+  margin: 0 auto; /* Untuk membuat ion-input berada di tengah jika diperlukan */
+  border-radius: 16px;
+}
+
+.custom-ion-item label {
+  font-weight: bold; /* Mengubah berat teks menjadi bold */
+  color: #333; /* Warna teks */
+  font-size: 12px; /* Ukuran teks */
+  margin: 8px; /* Jarak dari label */
+}
+
